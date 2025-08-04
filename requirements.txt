@@ -1,8 +1,9 @@
 dotenv
 openai
-langchain
 python-dotenv
 tiktoken
 chromadb
 unstructured
 pypdf
+langchain_community
+langchain_openai

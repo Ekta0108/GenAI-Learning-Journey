@@ -1,4 +1,4 @@
-## 🎯 Goal of Lesson 1.4 Fine-Tuning vs RAG (Retrieval-Augmented Generation)
+## Goal of Lesson 1.4 Fine-Tuning vs RAG (Retrieval-Augmented Generation)
 
 Understand how to **customize LLMs** for your use case:
 
@@ -7,7 +7,7 @@ Understand how to **customize LLMs** for your use case:
 
 ---
 
-## 🔍 Why You Need This
+## Why You Need This
 
 ### Problem:
 
@@ -24,11 +24,11 @@ You can fix this in two ways:
 
 ---
 
-## ⚙️ What is Fine-Tuning?
+## What is Fine-Tuning?
 
 Fine-tuning = Training the model again on your **own examples** to teach it something new or specific.
 
-### 🔸 Example Use Case:
+### Example Use Case:
 
 You want GPT to always answer in the tone of your company’s support team:
 
@@ -36,13 +36,13 @@ You want GPT to always answer in the tone of your company’s support team:
 * You fine-tune the base GPT model with those
 * The new model learns your brand’s voice
 
-### ✅ Pros:
+### Pros:
 
 * Results feel integrated
 * Fast at inference time
 * Tailored behavior
 
-### ❌ Cons:
+### Cons:
 
 * Takes time, cost
 * Hard to update
@@ -50,7 +50,7 @@ You want GPT to always answer in the tone of your company’s support team:
 
 ---
 
-## 🔍 What is RAG (Retrieval-Augmented Generation)?
+## What is RAG (Retrieval-Augmented Generation)?
 
 > “RAG” means: **Search first, then ask the LLM.**
 
@@ -58,17 +58,17 @@ LLMs don't store new info — but you can plug in an **external database or file
 
 ---
 
-### 🔄 How RAG Works:
+### How RAG Works:
 
-1. 🧾 You upload documents (PDFs, docs, web pages)
-2. 🔍 User asks a question
-3. 📥 A search system (like a vector DB) retrieves top relevant chunks
-4. 🧠 The retrieved chunks are added to the prompt
-5. 🤖 The LLM generates a response using those chunks
+1. You upload documents (PDFs, docs, web pages)
+2. User asks a question
+3. A search system (like a vector DB) retrieves top relevant chunks
+4. The retrieved chunks are added to the prompt
+5. The LLM generates a response using those chunks
 
 ---
 
-### 🔸 Example Use Case:
+### Example Use Case:
 
 > “Summarize the company’s leave policy”
 > → Pulls from your company HR policy PDF
@@ -77,7 +77,7 @@ LLMs don't store new info — but you can plug in an **external database or file
 
 ---
 
-## 🧠 Analogy
+## Analogy
 
 | Method      | Analogy                                   |
 | ----------- | ----------------------------------------- |

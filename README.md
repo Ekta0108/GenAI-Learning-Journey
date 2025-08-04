@@ -1,10 +1,10 @@
-# 🧠 Generative AI & AI Agents Learning Journey
+# Generative AI & AI Agents Learning Journey
 
 This repo documents my hands-on learning of Generative AI & AI Agent concepts, using Python + Azure OpenAI.
 
 ---
 
-## ✅ Lessons Completed
+## Lessons Completed
 
 ### Lesson 1: Foundations of GenAI
 - [x] 1.1 What is Generative AI?
@@ -18,7 +18,7 @@ This repo documents my hands-on learning of Generative AI & AI Agent concepts, u
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 - `lessons/`: step-by-step Python exercises
 - `docs/`: explanations, visual notes, diagrams
@@ -28,7 +28,7 @@ This repo documents my hands-on learning of Generative AI & AI Agent concepts, u
 
 ---
 
-## 📜 Requirements
+## Requirements
 ```bash
 pip install -r requirements.txt
 
@@ -39,7 +39,7 @@ python lessons/lesson1_3_prompt_engineering.py
 
 
 
-## 🔐 Azure OpenAI Setup
+## Azure OpenAI Setup
 
 To run the lessons, you'll need to set up Azure OpenAI. Follow these steps:
 
@@ -66,4 +66,4 @@ AZURE_OPENAI_API_VERSION=2023-07-01-preview
 - **API Version**: Use the latest stable version (2023-07-01-preview)
 
 ### 4. Security Note
-⚠️ **Important**: Never commit your `.env` file to version control. It's already added to `.gitignore` to prevent accidental commits.
+ **Important**: Never commit your `.env` file to version control. It's already added to `.gitignore` to prevent accidental commits.

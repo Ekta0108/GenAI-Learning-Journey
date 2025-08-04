@@ -11,7 +11,7 @@ openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
 openai.api_key = os.getenv("AZURE_OPENAI_API_KEY")
 openai.api_version = os.getenv("AZURE_OPENAI_API_VERSION")
 
-deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
+deployment_name = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT")
 
 # 1. Zero-Shot Example
 
