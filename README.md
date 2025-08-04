@@ -10,9 +10,9 @@ This repo documents my hands-on learning of Generative AI & AI Agent concepts, u
 - [x] 1.1 What is Generative AI?
 - [x] 1.2 How LLMs Generate Text (word-by-word prediction)
 - [x] 1.3 Prompt Engineering (Zero-shot, Few-shot, CoT, Role prompting)
+- [x] 1.4 Fine-Tuning vs RAG
 
 ### Lessons Coming Up
-- [ ] 1.4 Fine-Tuning vs RAG
 - [ ] 2.x AI Agents (with tools and memory)
 - [ ] Capstone Project
 
