@@ -10,11 +10,11 @@ This repo documents my hands-on learning of Generative AI & AI Agent concepts, u
 - [x] 1.1 What is Generative AI?
 - [x] 1.2 How LLMs Generate Text (word-by-word prediction)
 - [x] 1.3 Prompt Engineering (Zero-shot, Few-shot, CoT, Role prompting)
-- [x] 1.4 Fine-Tuning vs RAG
 
 ### Lessons Coming Up
 - [ ] 2.x AI Agents (with tools and memory)
 - [ ] Capstone Project
+- [ ] 1.4 Fine-Tuning vs RAG
 
 ---
 
@@ -53,10 +53,10 @@ To run the lessons, you'll need to set up Azure OpenAI. Follow these steps:
 Create a `.env` file in the root folder with the following variables:
 
 ```env
-AZURE_OPENAI_ENDPOINT=https://<your-resource>.openai.azure.com/
-AZURE_OPENAI_API_KEY=<your-key>
-AZURE_OPENAI_DEPLOYMENT=gpt35turbo
-AZURE_OPENAI_API_VERSION=2023-07-01-preview
+OPEN_AI_ENDPOINT=https://<your-resource>.openai.azure.com/
+OPEN_AI_KEY=<your-key>
+CHAT_MODEL="gpt-35-turbo"
+EMBEDDING_MODEL="text-embedding-ada-002"
 ```
 
 ### 3. Get Your Credentials

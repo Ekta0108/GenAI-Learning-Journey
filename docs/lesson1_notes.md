@@ -29,16 +29,16 @@ Generative AI refers to models that create new content (text, images, code, etc.
 
 ### Hands-On:
 
-Used Azure OpenAI `ChatCompletion.create()` with system and user messages to generate text.
+Used Azure OpenAI `chat.completions.create()` with system and user messages to generate text.
 
 ### Code Sample:
 
 ```python
-response = openai.ChatCompletion.create(
-    engine=deployment_name,
+response = client.chat.completions.create(
+    model=chat_model,
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Tell me a joke about clouds."}
+        {"role": "user",   "content": user_input}
     ]
 )
 ```
@@ -197,8 +197,8 @@ prompt = [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Translate this to French: I love coffee."}
 ]
-response = openai.ChatCompletion.create(
-    engine=deployment_name,
+response = client.chat.completions.create(
+    model=chat_model,
     messages=prompt
 )
 ```

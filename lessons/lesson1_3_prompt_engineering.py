@@ -1,17 +1,18 @@
 import os
 from dotenv import load_dotenv
-import openai
+from openai import AzureOpenAI
 
-# Load credentials from .env
 load_dotenv()
 
-# Set up OpenAI client for Azure
-openai.api_type = "azure"
-openai.api_base = os.getenv("AZURE_OPENAI_ENDPOINT")
-openai.api_key = os.getenv("AZURE_OPENAI_API_KEY")
-openai.api_version = os.getenv("AZURE_OPENAI_API_VERSION")
+open_ai_endpoint = os.getenv("OPEN_AI_ENDPOINT")
+open_ai_key = os.getenv("OPEN_AI_KEY")
+chat_model = os.getenv("CHAT_MODEL")
 
-deployment_name = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT")
+client = AzureOpenAI(
+    api_key=open_ai_key,
+    azure_endpoint=open_ai_endpoint,
+    api_version="2024-10-21"
+)
 
 # 1. Zero-Shot Example
 
@@ -46,11 +47,11 @@ prompt_4 = [
 # Custom Function to Ask GPT
 
 def ask_gpt(prompt_messages):
-    response = openai.ChatCompletion.create(
-        engine=deployment_name,
+    response = client.chat.completions.create(
+        model=chat_model,
         messages= prompt_messages
     )
-    return response['choices'][0]['message']['content']
+    return response.choices[0].message.content
 
 
 # This code sets up an OpenAI client for Azure and sends a prompt to the GPT model.

@@ -1,38 +1,45 @@
-import os, sys
+import os
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
-# Load credentials from .env
-load_dotenv()
+def main():
 
-# Set up OpenAI client for Azure
+    try:
+        # Load my project’s .env (if it exists)
+        load_dotenv()
 
-client = AzureOpenAI(
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-)
+        open_ai_endpoint = os.getenv("OPEN_AI_ENDPOINT")
+        open_ai_key = os.getenv("OPEN_AI_KEY")
+        chat_model = os.getenv("CHAT_MODEL")
 
-deployment_name = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT")
+        client = AzureOpenAI(
+            api_key=open_ai_key,
+            azure_endpoint=open_ai_endpoint,
+            api_version="2024-10-21"
+        )
 
-# response = client.chat.completions.create(
-#     model=deployment_name,  # this is your Azure deployment name
+        while True:
+            user_input = input("You: ")
+            if user_input.lower() == "quit":
+                break
+            else:
+                response = client.chat.completions.create(
+                    model=chat_model,
+                    messages=[
+                        {"role": "system", "content": "You are a helpful assistant."},
+                        {"role": "user",   "content": user_input}
+                    ]
+                )
+                print("Assistant:", response.choices[0].message.content)
 
-#     messages=[
-#         {"role": "system", "content": "You are a helpful assistant."},
-#         {"role": "user", "content": "Write a fun bedtime story about a robot and a cat."}
-#     ]
-# )
+    except Exception as e:
+        print(f"Error: {e}")
 
-# print(response['choices'][0]['message']['content'])
+if __name__ == "__main__":
+    main()
 
-try:
-    client.chat.completions.create(
-        model=os.getenv("AZURE_OPENAI_CHAT_DEPLOYMEN"), 
-        messages=[{"role":"system","content":"ping"}]
-    )
-    print("Chat call succeeded")
-except Exception as e:
-    print("Error:", repr(e))
-    sys.exit(1)
+
+
+
+
 
