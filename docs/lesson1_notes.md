@@ -64,9 +64,6 @@ LLMs like GPT generate text by predicting the **next token** (word or part of a 
 
 * A word or word fragment (e.g., "artificial" or "un" + "believable")
 * GPT models don’t generate whole sentences at once, only **token-by-token**
-
-Great follow-up! Let’s break down these 3 terms intuitively — **embeddings**, **transformers**, and **LangChain** — in the context of Generative AI and RAG.
-
 ---
 
 ## 🧊 1. What are **Embeddings**? (🧠 How AI understands meaning)
@@ -159,10 +156,6 @@ With LangChain:
 | LangChain    | Python framework for LLM workflows | Makes building apps with LLMs easier        |
 
 ---
-
-Want to try a **hands-on example with embeddings and LangChain** next?
-We can load a PDF and query it using Azure GPT + LangChain!
-
 
 ### 🔧 Temperature Explained:
 
