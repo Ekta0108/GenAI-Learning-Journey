@@ -16,10 +16,10 @@ os.environ["OPENAI_API_BASE"] = os.getenv("AZURE_OPENAI_ENDPOINT")
 os.environ["OPENAI_API_KEY"] = os.getenv("AZURE_OPENAI_API_KEY")
 os.environ["OPENAI_API_VERSION"] = os.getenv("AZURE_OPENAI_API_VERSION")
 
-deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+deployment_name = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
 
 # Step 1: Load PDF
-loader = PyPDFLoader("docs/sample.pdf")
+loader = PyPDFLoader("docs/AZ-500.pdf")
 pages = loader.load()
 
 # Step 2: Split text into chunks
